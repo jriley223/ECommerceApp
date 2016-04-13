@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="dialect">
+      org.hibernate.dialect.MySQLDialect
+    </property>
+    <property name="connection.driver_class">
+      com.mysql.jdbc.Driver
+    </property>
+    <property name="connection.url">jdbc:mysql://yoursql.cs.vassar.edu:3306/juriley_final</property>
+    <property name="connection.username">juriley</property>
+    <property name="connection.password">juriley</property>
+    <property name="c3p0.min_size">1</property>
+    <property name="c3p0.max_size">5</property>
+    <property name="c3p0.timeout">300</property>
+    <property name="c3p0.max_statements">50</property>
+    <property name="c3p0.idle_test_period">300</property>
+    <mapping resource="controller/User.hbm.xml"/>
+    <mapping resource="controller/UserPending.hbm.xml"/>
+    <mapping resource="controller/ShoppingCart.hbm.xml"/>
+    <mapping resource="controller/CatalogItem.hbm.xml"/>
+    <mapping resource="controller/UserTransaction.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

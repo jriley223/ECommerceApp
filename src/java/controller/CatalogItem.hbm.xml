@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="controller.CatalogItem" table="CatalogItem">
+        <id column="ItemID" name="itemId">
+            <generator class="increment"/>
+        </id>
+        <property column="Description" name="description"/>
+        <property column="Name" name="name"/>
+        <property column="Price" name="price"/>
+    </class>
+</hibernate-mapping>

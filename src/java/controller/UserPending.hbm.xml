@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="controller.UserPending" table="users_pending">
+        <id column="UserName" name="userName"/>
+        <property column="Password" name="password"/>
+        <property column="EmailAddress" name="emailAddress"/>
+        <property column="ActivationCode" name="activationCode"/>
+        <property column="TimeStamp" type="timestamp" name="timeStamp"/>
+    </class>
+</hibernate-mapping>

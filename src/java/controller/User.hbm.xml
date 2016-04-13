@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="controller.User" table="users">
+        <id column="UserName" name="userName"/>
+        <property column="Password" name="password"/>
+        <property column="EmailAddress" name="emailAddress"/>
+        <set lazy="false" name="roles" table="user_roles">
+            <key column="UserName"/>
+            <element column="RoleName" type="string"/>
+        </set>
+    </class>
+</hibernate-mapping>
